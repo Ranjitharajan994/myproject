@@ -40,7 +40,7 @@
             &nbsp;</td>
         <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label8" runat="server" Font-Size="Small" ForeColor="Black" Text="Ur Cart Items"></asp:Label>
+            <asp:Label ID="Label8" runat="server" Font-Size="Medium" ForeColor="White" Text="Ur Cart Items"></asp:Label>
         </td>
         <td>&nbsp;</td>
     </tr>
@@ -112,14 +112,17 @@
     <tr>
         <td class="auto-style1">
             `</td>
-        <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</td>
+        <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+            <br />
+        </td>
         <td>&nbsp;</td>
     </tr>
     <tr>
         <td class="auto-style1">&nbsp;</td>
         <td class="auto-style4">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label18" runat="server" Font-Size="Medium" ForeColor="White" Text="Grand Total:  Rs"></asp:Label>
+            &nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label9" runat="server" Text="Label" Font-Italic="True" Font-Size="Medium" ForeColor="White"></asp:Label>
         </td>
         <td>&nbsp;</td>
     </tr>
@@ -130,8 +133,14 @@
         <td>&nbsp;</td>
     </tr>
     <tr>
+        <td class="auto-style1">&nbsp;</td>
+        <td class="auto-style4">
+            &nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
         <td class="auto-style1"></td>
-        <td class="auto-style4">&nbsp;&nbsp; &nbsp;<asp:ImageButton ID="ImageButton1" runat="server" Height="135px" ImageUrl="~/NewFolder1/download (1).jpg" Width="356px" OnClick="ImageButton1_Click" />
+        <td class="auto-style4">&nbsp;&nbsp; &nbsp;<asp:ImageButton ID="ImageButton1" runat="server" Height="119px" ImageUrl="~/NewFolder1/download (1).jpg" Width="312px" OnClick="ImageButton1_Click" />
         </td>
         <td></td>
     </tr>

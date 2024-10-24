@@ -28,6 +28,18 @@ namespace myproject
             con.Close();
             return i;
         }
+        public int fun_nonquery_sp(SqlCommand cmd)
+        {
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
+            cmd.Connection = con; 
+            con.Open();
+            int j = cmd.ExecuteNonQuery();
+            con.Close();
+            return j;
+        }
         public string fun_scalar(string sql)
         {
             if (con.State == ConnectionState.Open)

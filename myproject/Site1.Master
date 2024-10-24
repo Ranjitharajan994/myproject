@@ -51,6 +51,7 @@
                   <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                      <div class="full">
                         <div class="center-desk">
+                            <p>                                   </p>
                            <div class="logo"> <a href="index.html"><img src="NewFolder1/logo.jpg" alt="#"></a> </div>
                         </div>
                      </div>
@@ -58,16 +59,13 @@
 
 
           
-   <nav class="navbar navbar-expand-lg navbar-dark fixed-Top" style="background-color:whitesmoke">
-    <div class="container-fluid">
+       <%-- <nav class="navbar navbar-expand-lg navbar-dark fixed-Top" style="background-color:whitesmoke">
+        <div class="container-fluid">
         <a class="navbar-brand" href="#">Plantkart</a>
         <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarsupportedcontent" aria-controls="navbarsupportedcontent" aria-expanded="false" aria-label="toggle navigaton">
-            <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
-            
-
-  
-
+        
         <div class="collapse navbar-collapse" id="navbarsupportedcontent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -85,15 +83,8 @@
             </div>
         </div>
         </nav>
-      
-                 
-
-           
-
-        
-      
-   
-          
+      </div></div></div>
+  --%>
     
                 <%--<li class="nav-item-dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="False">
@@ -106,12 +97,9 @@
                        <%-- <li><a class="dropdown-item" href="#">something else here</a></li>
                         </ul>
                 </li>
-              
-            </ul>
+               </ul>
         </div>
-
     </div>
-
 
                    <%--  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                      <div class="menu-area">
@@ -142,23 +130,28 @@
       </header>
       <!-- end header -->
       <section >
-         <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
+        <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
             <ol class="carousel-indicators">
                <li data-target="#main_slider" data-slide-to="0" class="active"></li>
                <li data-target="#main_slider" data-slide-to="1"></li>
                <li data-target="#main_slider" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner">
+           <div class="carousel-inner">
                <div class="carousel-item active">
                   <div class="container">
                      <div class="row marginii">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="carousel-caption ">
-                              <h1>Welcome To The <strong class="color">Nutrients Plants</strong></h1>
-                              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
-                              <a class="btn btn-lg btn-primary" href="#" role="button">About</a>
-                              <a class="btn btn-lg btn-primary" href="#" role="button">Contact US</a>
-                           </div>
+                              <h1>Welcome To The <strong class="color"> PlantKart Family </strong></h1>
+                               <p>                                                          </p>
+                        <h2> Indoor and Outdoor Plants Deliverd to Your Door.</h2>
+                            <h2> Make Your Dream Garden with Live Plants and Accessories ,
+                               Online at Lowest Price!</h2>
+                              <h2> Shop Now.............</h2>
+                          <%--    
+                               <a class="btn btn-lg btn-primary" href="#" role="button">About</a>
+                              <a class="btn btn-lg btn-primary" href="#" role="button">Contact US</a>--%>
+                         </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                            <div class="img-box">
@@ -168,7 +161,9 @@
                      </div>
                   </div>
                </div>
-               <div class="carousel-item">
+                </div>
+             </div>
+              <%-- <div class="carousel-item">
                   <div class="container">
                      <div class="row marginii">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -212,13 +207,14 @@
             <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
             <i class='fa fa-angle-right'></i>
             </a>
-         </div>
+         </div>--%>
           
-  
-           <div>
+  <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+           
+           
 
       </section>
       <!-- plant -->

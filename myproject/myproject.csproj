@@ -44,6 +44,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -74,6 +76,16 @@
     <Content Include="Add_product.aspx" />
     <Content Include="Adminhome.aspx" />
     <Content Include="Adminregistration.aspx" />
+    <Content Include="Connected Services\BalanceService\myproject.BalanceService.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\BalanceService\Service.disco" />
+    <None Include="Connected Services\BalanceService\configuration91.svcinfo" />
+    <None Include="Connected Services\BalanceService\configuration.svcinfo" />
+    <None Include="Connected Services\BalanceService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="css\animate.min.css" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\jquery-ui.css" />
@@ -85,6 +97,7 @@
     <Content Include="css\responsive.css" />
     <Content Include="css\slick.css" />
     <Content Include="css\style.css" />
+    <Content Include="feedback.aspx" />
     <Content Include="icon\facebook.png" />
     <Content Include="icon\instagram.png" />
     <Content Include="icon\linkedin.png" />
@@ -116,8 +129,13 @@
     <Content Include="js\plugin.js" />
     <Content Include="js\popper.min.js" />
     <Content Include="Login.aspx" />
+    <Content Include="NewFolder1\Bougainvillea.jpg" />
+    <Content Include="NewFolder1\buyproduct.jpg" />
     <Content Include="NewFolder1\cartimg.png" />
+    <Content Include="NewFolder1\cartoonlog.jpg" />
+    <Content Include="NewFolder1\clickbutton.jpg" />
     <Content Include="NewFolder1\clickhere.jpg" />
+    <Content Include="NewFolder1\design2.jpg" />
     <Content Include="NewFolder1\download %281%29.jfif" />
     <Content Include="NewFolder1\download %281%29.jpg" />
     <Content Include="NewFolder1\download %285%29.jfif" />
@@ -126,12 +144,20 @@
     <Content Include="NewFolder1\download%287%29.jfif" />
     <Content Include="NewFolder1\download.jpg" />
     <Content Include="NewFolder1\editimg.jpg" />
+    <Content Include="NewFolder1\img.jpg" />
     <Content Include="NewFolder1\imgicon.jpg" />
+    <Content Include="NewFolder1\Japanese Jasmine.jpg" />
+    <Content Include="NewFolder1\Jasmine.jpg" />
     <Content Include="NewFolder1\login.jpg" />
+    <Content Include="NewFolder1\loginicon.jpg" />
     <Content Include="NewFolder1\loginimg.jpg" />
     <Content Include="NewFolder1\logo.jpg" />
+    <Content Include="payment.aspx" />
     <Content Include="product.aspx" />
     <Content Include="Producthomepage.aspx" />
+    <Content Include="reply.aspx" />
+    <Content Include="updatestatus.aspx" />
+    <Content Include="userfeedback.aspx" />
     <Content Include="Userhome.aspx" />
     <Content Include="Userregistration.aspx" />
     <Content Include="viewbill.aspx" />
@@ -169,12 +195,31 @@
       <DependentUpon>Adminregistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
+    <Compile Include="Connected Services\BalanceService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
     </Compile>
     <Compile Include="product.aspx.cs">
       <DependentUpon>product.aspx</DependentUpon>
@@ -191,12 +236,33 @@
       <DependentUpon>Producthomepage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reply.aspx.cs">
+      <DependentUpon>reply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reply.aspx.designer.cs">
+      <DependentUpon>reply.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="updatestatus.aspx.cs">
+      <DependentUpon>updatestatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="updatestatus.aspx.designer.cs">
+      <DependentUpon>updatestatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userfeedback.aspx.cs">
+      <DependentUpon>userfeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userfeedback.aspx.designer.cs">
+      <DependentUpon>userfeedback.aspx</DependentUpon>
     </Compile>
     <Compile Include="Userhome.aspx.cs">
       <DependentUpon>Userhome.aspx</DependentUpon>
@@ -235,6 +301,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\BalanceService\Service.wsdl" />
+    <None Include="Connected Services\BalanceService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BalanceService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BalanceService\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
@@ -246,6 +322,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="product\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BalanceService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

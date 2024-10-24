@@ -20,6 +20,9 @@
             width: 94px;
             text-align: center;
         }
+        .auto-style12 {
+            margin-left: 9px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -39,7 +42,7 @@
         <tr>
             <td>&nbsp;</td>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:DataList ID="DataList1" runat="server" RepeatColumns="5" OnItemCommand="DataList1_ItemCommand" ForeColor="#333333" Height="300px" Width="300px" BorderWidth="10px" CellPadding="4">
+                <asp:DataList ID="DataList1" runat="server" RepeatColumns="3" OnItemCommand="DataList1_ItemCommand" ForeColor="#333333" Height="300px" Width="1490px" BorderWidth="10px" CellPadding="4" CssClass="auto-style12">
                     <AlternatingItemStyle BackColor="White" ForeColor="#284775" />
                     <EditItemStyle BorderColor="White" />
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -71,7 +74,7 @@
                                     <br />
                                     &nbsp;</td>
                                 <td class="auto-style9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="Black" Text='<%# Eval("product_price") %>'></asp:Label>
+                                    <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Large" ForeColor="Black" Text='<%# Eval("product_price") %>'></asp:Label>
                                 </td>
                                 <td class="auto-style9">&nbsp;</td>
                             </tr>

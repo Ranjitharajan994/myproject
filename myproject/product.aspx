@@ -49,11 +49,53 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style1">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style10">&nbsp;</td>
             <td class="auto-style10">
-                <asp:Label ID="Label6" runat="server" Font-Size="Medium" ForeColor="Black" Text="Name"></asp:Label>
+                <asp:Label ID="Label6" runat="server" Font-Size="Large" ForeColor="Black" Text="Name"></asp:Label>
                 </td>
             <td class="auto-style1">
-                <asp:Label ID="Label1" runat="server" Text="Label" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Label" Font-Size="Large" ForeColor="Black"></asp:Label>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style10">&nbsp;</td>
+            <td class="auto-style10">
+                &nbsp;</td>
+            <td class="auto-style1">
+                &nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="auto-style10">
+                &nbsp;</td>
+            <td class="auto-style10">
+                &nbsp;</td>
+            <td class="auto-style1">
+                <asp:Image ID="Image1" runat="server" Height="170px" Width="201px" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -66,8 +108,7 @@
             <td class="auto-style10">
                 &nbsp;</td>
             <td class="auto-style1">
-                <asp:Image ID="Image1" runat="server" Height="150px" Width="170px" />
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -77,10 +118,10 @@
             <td class="auto-style8">
                 &nbsp;</td>
             <td class="auto-style8">
-                <asp:Label ID="Label7" runat="server" Font-Size="Medium" ForeColor="Black" Text="Price"></asp:Label>
+                <asp:Label ID="Label7" runat="server" Font-Size="Large" ForeColor="Black" Text="Price"></asp:Label>
                 :</td>
             <td class="auto-style5">
-                <asp:Label ID="Label2" runat="server" Text="Label" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="Label" Font-Size="Large" ForeColor="Black"></asp:Label>
             </td>
             <td class="auto-style4"></td>
             <td class="auto-style4">&nbsp;</td>
@@ -91,10 +132,10 @@
             <td class="auto-style10">
                 &nbsp;</td>
             <td class="auto-style10">
-                <asp:Label ID="Label8" runat="server" Font-Size="Medium" ForeColor="Black" Text="Description"></asp:Label>
+                <asp:Label ID="Label8" runat="server" Font-Size="Large" ForeColor="Black" Text="Description"></asp:Label>
                 :</td>
             <td class="auto-style1">
-                <asp:Label ID="Label3" runat="server" Text="Label" Font-Size="Medium" ForeColor="Black"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="Label" Font-Size="Large" ForeColor="Black"></asp:Label>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -117,13 +158,13 @@
             <td class="auto-style9">
                 &nbsp;</td>
             <td class="auto-style9">
-                <asp:Label ID="Label5" runat="server" Font-Italic="True" Font-Size="Small" Text="Enter Quantity :" ForeColor="Black"></asp:Label>
+                <asp:Label ID="Label5" runat="server" Font-Italic="True" Font-Size="Medium" Text="Enter Quantity :" ForeColor="Black"></asp:Label>
             </td>
             <td class="auto-style3">
                 <asp:TextBox ID="TextBox1" runat="server" ></asp:TextBox>
             </td>
             <td class="auto-style2">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="*" ForeColor="Maroon"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="*" ForeColor="Maroon" Font-Size="Large"></asp:RequiredFieldValidator>
             </td>
             <td class="auto-style2">
                 &nbsp;</td>
@@ -131,14 +172,29 @@
                 &nbsp;</td>
         </tr>
         <tr>
+            <td class="auto-style2"></td>
+            <td class="auto-style9">
+                </td>
+            <td class="auto-style9">
+            </td>
+            <td class="auto-style3">
+            </td>
+            <td class="auto-style2">
+            </td>
+            <td class="auto-style2">
+                </td>
+            <td class="auto-style2">
+                </td>
+        </tr>
+        <tr>
             <td class="auto-style2">&nbsp;</td>
             <td class="auto-style9">
                 &nbsp;</td>
             <td class="auto-style9">
-                <asp:Label ID="Label9" runat="server" Font-Italic="True" Font-Size="Small" ForeColor="Black" Text="Total Price  :" Visible="False"></asp:Label>
+                <asp:Label ID="Label9" runat="server" Font-Italic="True" Font-Size="Medium" ForeColor="Black" Text="Total Price  :" Visible="False"></asp:Label>
             </td>
             <td class="auto-style3">
-                <asp:Label ID="Label10" runat="server" Text="Label" Font-Size="Medium" ForeColor="Black" Visible="False"></asp:Label>
+                <asp:Label ID="Label10" runat="server" Text="Label" Font-Size="Medium" ForeColor="White" Visible="False"></asp:Label>
             </td>
             <td class="auto-style2">
                 &nbsp;</td>
@@ -154,7 +210,7 @@
                 &nbsp;</td>
             <td class="auto-style10">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;<asp:ImageButton ID="ImageButton1" runat="server" OnClick="ImageButton1_Click" ImageUrl="~/NewFolder1/cartimg.png" />
+                &nbsp;<asp:ImageButton ID="ImageButton1" runat="server" OnClick="ImageButton1_Click" ImageUrl="~/NewFolder1/cartimg.png" Width="177px" />
             </td>
             <td class="auto-style1">
                 <asp:ImageButton ID="ImageButton3" runat="server" CssClass="auto-style6" Height="118px" ImageUrl="~/NewFolder1/download.jpg" OnClick="ImageButton3_Click" Width="300px" ImageAlign="Middle" />
@@ -174,7 +230,8 @@
             <td>&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
             <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style1">&nbsp;</td>
+            <td class="auto-style1">
+                &nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

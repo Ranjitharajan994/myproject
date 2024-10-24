@@ -18,26 +18,25 @@ namespace myproject
         {
             if(!IsPostBack)
             {
-                
-
                 string sel = "select catagory_id,catagory_name from catagory_tab";
                 DataSet ds= obj.fun_dataset(sel);
                 DropDownList1.DataSource = ds;
                 DropDownList1.DataTextField = "catagory_name";
                 DropDownList1.DataValueField = "catagory_id";
                 DropDownList1.DataBind();
+                gridbindfun();
             }
         }
         public void gridbindfun()
         {
-            GridView1.Visible = true;
+           
             string sel = "select * from productadd_tab";
             DataSet ds = obj.fun_dataset(sel);
             GridView1.DataSource = ds;
             GridView1.DataBind();
 }
 
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+       protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
             string p = "~/product/" + FileUpload1.FileName;
             FileUpload1.SaveAs(MapPath(p));
@@ -47,11 +46,10 @@ namespace myproject
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
         {
             Label13.Visible = true;
-            gridbindfun();
+            GridView1.Visible = true;
             
         }
 
-       
 
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
@@ -62,7 +60,7 @@ namespace myproject
         protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             GridView1.EditIndex = -1;
-            GridView1.DataBind();
+            gridbindfun();
 
         }
 
@@ -70,23 +68,14 @@ namespace myproject
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             int index = e.RowIndex;
-            GridViewRow rw = (GridViewRow)GridView1.Rows[index];
             int getid = Convert.ToInt32(GridView1.DataKeys[index].Value);
             TextBox txtproduct_name = (TextBox)GridView1.Rows[index].Cells[1].FindControl("TextBox7");
-            //TextBox txtproduct_name = (TextBox)rw.FindControl("Textbox7");
             TextBox txtproduct_price = (TextBox)GridView1.Rows[index].Cells[2].FindControl("TextBox8");
-
-           // TextBox txtproduct_price = (TextBox)rw.FindControl("Textbox8");
-            FileUpload fu = (FileUpload)rw.FindControl("FileUpload2");
+            FileUpload fu = (FileUpload)GridView1.Rows[index].Cells[3].FindControl("FileUpload2");
+            string path = "~/add_catagory/" + fu.FileName;
+            fu.SaveAs(MapPath(path));
             TextBox txtproduct_stock = (TextBox)GridView1.Rows[index].Cells[4].FindControl("TextBox9");
-
-            // TextBox txtproduct_stock = (TextBox)rw.FindControl("Textbox9");
             TextBox txtproduct_des = (TextBox)GridView1.Rows[index].Cells[5].FindControl("TextBox10");
-
-            //TextBox txtproduct_des = (TextBox)rw.FindControl("Textbox10");
-            //Label label1 = (Label)rw.FindControl("Label20");
-            string path = "~/product/" + FileUpload1.FileName;
-            FileUpload1.SaveAs(MapPath(path));
             string upstr = "update productadd_tab set  product_name='" + txtproduct_name.Text + "', product_price="+txtproduct_price.Text+", product_img='" + path + "', product_stock=" + txtproduct_stock.Text + ",product_des='" + txtproduct_des.Text + "' where Product_id='" +getid+ "'";
             int f = obj.fun_nonquery(upstr);
             GridView1.EditIndex = -1;

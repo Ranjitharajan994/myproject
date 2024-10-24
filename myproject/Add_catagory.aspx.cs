@@ -18,59 +18,76 @@ namespace myproject
         {
             if (!IsPostBack)
             {
-                GridView1.DataBind();
+                gridbindfun();
             }
         }
-       protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
-        {
-            string an = "~/add_catagory/" + FileUpload1.FileName;
-            FileUpload1.SaveAs(MapPath(an));
 
-            string str = "insert into catagory_tab values('" + TextBox1.Text + "','" + an + "','" + TextBox2.Text + "','Available')";
-            int i = obj.fun_nonquery(str);
-        }
-
-        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        public void gridbindfun()
         {
-            Label4.Visible = true;
             string sel = "select * from catagory_tab";
             DataSet ds = obj.fun_dataset(sel);
             GridView1.DataSource = ds;
             GridView1.DataBind();
         }
 
+
+
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            string img = "~/add_catagory/" + FileUpload1.FileName;
+            FileUpload1.SaveAs(MapPath(img));
+
+            string str = "insert into catagory_tab values('" + TextBox1.Text + "','" + img + "','" + TextBox2.Text + "','Available')";
+            int i = obj.fun_nonquery(str);
+        }
+
+        protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+        {
+            Label4.Visible = true;
+            GridView1.Visible = true;
+            
+           
+        }
+
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
             GridView1.EditIndex = e.NewEditIndex;
-            GridView1.DataBind();
+            gridbindfun();
+
         }
 
         protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             GridView1.EditIndex = -1;
-            GridView1.DataBind();
+            gridbindfun();
         }
 
-        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            GridView1.PageIndex = e.NewPageIndex;
-            GridView1.DataBind();
+            int i = e.RowIndex;
+            int getid = Convert.ToInt32(GridView1.DataKeys[i].Value);
+            string del = "delete from catagory_tab where catagory_id=" + getid + "";
+            int j = obj.fun_nonquery(del);
+            gridbindfun();
         }
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            int index = e.RowIndex;
-            GridViewRow rw = (GridViewRow)GridView1.Rows[index];
-            TextBox txtcate_name = (TextBox)rw.FindControl("Textbox3");
-            FileUpload fu = (FileUpload)rw.FindControl("FileUpload1");
-            TextBox txtcate_des = (TextBox)rw.FindControl("Textbox4");
-            Label label1 = (Label)rw.FindControl("Label8");
-            string path = "~/add_catagory/" + FileUpload1.FileName;
-            FileUpload1.SaveAs(MapPath(path));
-            string upstr = "update catagory_tab set   catagory_name='" + txtcate_name.Text + "', catagory_img='" + path + "', catagory_des='" + txtcate_des.Text + "' where catagory_id='" + label1.Text + "'";
+            int i = e.RowIndex;
+            int getid = Convert.ToInt32(GridView1.DataKeys[i].Value);
+            
+            TextBox txtcate_name = (TextBox)GridView1.Rows[i].Cells[1].FindControl("TextBox3");
+            TextBox txtcate_des = (TextBox)GridView1.Rows[i].Cells[3].FindControl("TextBox4");
+
+            FileUpload fu = (FileUpload)GridView1.Rows[i].Cells[2].FindControl("FileUpload2");
+            string path = "~/add_catagory/" + fu.FileName;
+            fu.SaveAs(MapPath(path));
+
+            string upstr = "update catagory_tab set   catagory_name='" + txtcate_name.Text + "', catagory_img='" + path + "', catagory_des='" + txtcate_des.Text + "'where catagory_id=" + getid + "";
             int f = obj.fun_nonquery(upstr);
             GridView1.EditIndex = -1;
-            GridView1.DataBind();
+            gridbindfun();
 
         }
     }
